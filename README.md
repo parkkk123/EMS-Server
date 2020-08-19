@@ -32,7 +32,29 @@ sh ./start_service_redis.sh
 ```
 
 ## คำสั่งเพิ่มเติม
-ใช้ในการลบ Service ที่รันอยู่
+
+ดู Images ทั้งหมด
+```bash
+docker image ls
+```
+
+ลบ Images และ Container
+```bash
+docker rmi -f IMAGE
+docker rm -f CONTAINERID
+```
+
+ดู Containers ทั้งหมด
+```bash
+docker container ls
+```
+
+ดู Container ที่กำลังรันปัจจุบัน และดู Container ID
+```bash
+docker ps 
+```
+
+ใช้ในการลบ Service ที่รันอยู่ เพื่อรัน Service ในชื่อ name เดิม
 ```bash
 docker service rm CONTAINERID
 ```
