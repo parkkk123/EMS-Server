@@ -1,0 +1,15 @@
+FROM node:14.8.0
+ENV EMS_Fr_VERSION  1.0
+
+WORKDIR /code
+COPY ./EMS_Fr /code
+
+RUN npm install
+
+EXPOSE 3200
+
+RUN npm run build
+RUN npm audit fix
+
+
+CMD ["npm", "run" ,"start" ]

@@ -1,0 +1,13 @@
+FROM node:14.8.0
+ENV BACKEND_VERSION   1.0
+
+WORKDIR /code
+
+COPY ./api /code
+RUN ls -al
+RUN npm install -g env-cmd
+RUN npm install
+#ENV PATH /node_modules/.bin:$PATH
+
+EXPOSE 8081
+CMD ["npm", "run", "serve"]

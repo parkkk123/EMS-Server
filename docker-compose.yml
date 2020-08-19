@@ -1,0 +1,103 @@
+version: '3'
+services:
+  backend_api:
+    build:
+      context: .
+      dockerfile: dockerfile_Backend_NodeJs
+    ports:
+     - "8081:8081"
+    container_name: nodejs-backend
+
+  ems_patient:
+    build:
+      context: .
+      dockerfile: dockerfile_EMS_Patient
+    ports:
+     - "3100:3100"
+
+  ems_doctor:
+    build:
+      context: .
+      dockerfile: dockerfile_EMS_Doctor
+    ports:
+      - "3400:3400"
+
+  ems_fr:
+    build:
+      context: .
+      dockerfile: dockerfile_EMS_Fr
+    ports:
+      - "3200:3200"
+
+# Device
+  redis_python_dev_dt2_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_dev_dt2_t1
+
+  redis_python_dev_dt3_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_dev_dt3_t1
+
+
+# EKG
+  redis_python_ekg_dt4_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_ekg_dt4_t1
+
+  redis_python_ekg_dt5_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_ekg_dt5_t1
+
+  redis_python_ekg_dt6_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_ekg_dt6_t1
+
+  redis_python_ekg_dt7_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_ekg_dt7_t1
+
+  redis_python_ekg_dt8_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_ekg_dt8_t1
+
+  redis_python_ekg_dt9_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_ekg_dt9_t1
+
+  redis_python_ekg_dt10_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_ekg_dt10_t1
+
+  redis_python_ekg_dt11_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_ekg_dt11_t1
+  
+  redis_python_ekg_dt12_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_ekg_dt12_t1
+
+  redis_python_ekg_dt13_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_ekg_dt13_t1
+  
+  redis_python_ekg_dt14_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_ekg_dt14_t1
+
+  redis_python_ekg_dt15_t1:
+    build:
+      context: .
+      dockerfile: dockerfile_redis_python_ekg_dt15_t1
