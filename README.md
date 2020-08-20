@@ -38,7 +38,7 @@ sh ./start_service_redis.sh
 docker image ls
 ```
 
-ลบ Images และ Container
+ลบ Image และ Container
 ```bash
 docker rmi -f IMAGE
 docker rm -f CONTAINERID
@@ -60,18 +60,29 @@ docker service rm CONTAINERID
 ```
 ต้องการใช้งานคำสั่ง bash ภายใน container
 ```bash
-docker exec -it CONTAINERID sh
+docker exec -it CONTAINERID bash
+```
+
+ดู Networks ของ Docker
+```bash
+docker network ls
 ```
 
 ## TO DO
-Frontend
-- [x] Patient web
-- [x] Fr web
-- [x] Doctor web
-- [ ] Ambulance web
+<b>Frontend</b>
 
-Backend
-- [x] API Server
-- [x] Redis Server
-- [x] EKG & Dev Services
-- [ ] Database ( หลังติดตั้ง Database ให้เปลี่ยน Host ของ mysql connection ไปใช้ชื่อ parameter name ที่ตั้งตอนสั่งรัน docker service )
+Web Service | Installation | Fixed Font
+:------------ | :-------------| :-------------
+Patient web |  :white_check_mark: | :x:
+Fr web |   :white_check_mark: | :x:
+Doctor web |   :white_check_mark: | :x:
+Ambulance web |   :x: | :x:
+
+<b>Backend</b>
+
+Backend Service | Installation | Host DNS | Note
+:------------ | :-------------| :------------- | :-------------
+API Server |  :white_check_mark: | :x: | หลังติดตั้ง Database ให้เปลี่ยน Host ของ mysql connection ไปใช้ชื่อ parameter name ที่ตั้งตอนสั่งรัน docker service 
+Redis Server |   :white_check_mark: | - | -
+EKG & Dev Services |   :white_check_mark: | :white_check_mark: | -
+Database |   :x: | :x: |  -

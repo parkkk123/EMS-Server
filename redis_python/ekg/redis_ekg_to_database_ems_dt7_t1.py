@@ -58,7 +58,7 @@ while not isExit:
     try:
         # step 1: connect the redis server
         print('step1')
-        pool = redis.ConnectionPool(host='localhost', port=6379, db=0)
+        pool = redis.ConnectionPool(host='EMS_redis_server', port=6379, db=0)
         r = redis.Redis(connection_pool=pool)
         
         while True:
